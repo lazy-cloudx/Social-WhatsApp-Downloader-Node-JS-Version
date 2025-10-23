@@ -77,9 +77,23 @@ module.exports = async (req, res) => {
 
   debugLog(`Detected video URL: ${linkFound}`);
 
-  // Downloader API
+  // Downloader API with 40-second timeout
   const downloaderUrl = `${PINTEREST_API_BASE}?url=${encodeURIComponent(linkFound)}`;
-  const downloaderRes = await fetch(downloaderUrl);
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 40000); // 40 seconds timeout
+
+  let downloaderRes;
+  try {
+    downloaderRes = await fetch(downloaderUrl, { signal: controller.signal });
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      return res.status(504).send('❌ Downloader API request timed out (40s).');
+    }
+    return res.status(500).send(`❌ Downloader API fetch error: ${err.message}`);
+  } finally {
+    clearTimeout(timeout);
+  }
+
   if (!downloaderRes.ok) {
     return res.status(500).send(`❌ Downloader API HTTP error: ${downloaderRes.status}`);
   }
