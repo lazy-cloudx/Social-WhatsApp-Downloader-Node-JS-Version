@@ -6,4 +6,140 @@
 || ############################################# ||
 \*===============================================*/
 
-const _0xb40d97=_0x5d91;(function(_0x300678,_0x2c2cc5){const _0x43061c=_0x5d91,_0x43f1d7=_0x300678();while(!![]){try{const _0x35e422=-parseInt(_0x43061c(0x149))/0x1+parseInt(_0x43061c(0x13b))/0x2+-parseInt(_0x43061c(0x12c))/0x3+-parseInt(_0x43061c(0x128))/0x4+parseInt(_0x43061c(0x14b))/0x5+-parseInt(_0x43061c(0x13f))/0x6+-parseInt(_0x43061c(0x151))/0x7*(-parseInt(_0x43061c(0x13c))/0x8);if(_0x35e422===_0x2c2cc5)break;else _0x43f1d7['push'](_0x43f1d7['shift']());}catch(_0x255d3b){_0x43f1d7['push'](_0x43f1d7['shift']());}}}(_0x3585,0xda3f1));function _0x5d91(_0x3bcacb,_0x3695a8){const _0x358588=_0x3585();return _0x5d91=function(_0x5d9105,_0x23b8ca){_0x5d9105=_0x5d9105-0x11c;let _0x4cf865=_0x358588[_0x5d9105];return _0x4cf865;},_0x5d91(_0x3bcacb,_0x3695a8);}const {PINTEREST_API_BASE,WHATSAPP_INSTANCE_ID,WHATSAPP_ACCESS_TOKEN}=require(_0xb40d97(0x12a));module[_0xb40d97(0x134)]=async(_0x4c672e,_0x37d50a)=>{const _0x2e3f86=_0xb40d97;if(_0x4c672e['method']!=='POST')return _0x37d50a[_0x2e3f86(0x136)](0x195)[_0x2e3f86(0x144)]({'error':'Method\x20Not\x20Allowed'});const _0x16af47=![];function _0x1062f3(_0x8d8fd9){const _0x495cea=_0x2e3f86;if(_0x16af47)console[_0x495cea(0x135)](_0x495cea(0x15a)+_0x8d8fd9);}_0x1062f3(_0x2e3f86(0x129));const _0x23abdd=_0x4c672e[_0x2e3f86(0x133)];if(!_0x23abdd||!_0x23abdd[_0x2e3f86(0x147)]||!_0x23abdd[_0x2e3f86(0x147)]['message'])return _0x1062f3(_0x2e3f86(0x12d)),_0x37d50a[_0x2e3f86(0x136)](0x190)[_0x2e3f86(0x13d)](_0x2e3f86(0x12f));const _0x2c8013=_0x23abdd[_0x2e3f86(0x147)][_0x2e3f86(0x142)]['body_message']||{},_0x1f5a84=_0x23abdd[_0x2e3f86(0x147)][_0x2e3f86(0x142)][_0x2e3f86(0x13a)]?.[_0x2e3f86(0x157)]||'',_0xb27551=['@g.us',_0x2e3f86(0x122),_0x2e3f86(0x156),_0x2e3f86(0x14a),_0x2e3f86(0x158),_0x2e3f86(0x14c),_0x2e3f86(0x132),_0x2e3f86(0x131),_0x2e3f86(0x14e),_0x2e3f86(0x136)];if(_0xb27551[_0x2e3f86(0x125)](_0x56d483=>_0x1f5a84[_0x2e3f86(0x130)](_0x56d483)))return _0x1062f3(_0x2e3f86(0x12b)+_0x1f5a84),_0x37d50a[_0x2e3f86(0x136)](0x190)['send'](_0x2e3f86(0x13e)+_0x1f5a84);let _0x43a647='';if(_0x2c8013?.[_0x2e3f86(0x150)]?.['conversation'])_0x43a647=_0x2c8013[_0x2e3f86(0x150)][_0x2e3f86(0x14d)];else{if(_0x2c8013?.['content'])_0x43a647=_0x2c8013[_0x2e3f86(0x152)];else{if(_0x2c8013?.['messages']?.[_0x2e3f86(0x127)]?.[_0x2e3f86(0x11f)])_0x43a647=_0x2c8013[_0x2e3f86(0x150)][_0x2e3f86(0x127)][_0x2e3f86(0x11f)];}}_0x1062f3(_0x2e3f86(0x124)+_0x43a647+_0x2e3f86(0x155)+_0x1f5a84);if(!_0x43a647||!_0x1f5a84)return _0x37d50a[_0x2e3f86(0x136)](0x190)[_0x2e3f86(0x13d)](_0x2e3f86(0x141));const _0x45e270=_0x1f5a84[_0x2e3f86(0x11e)](/^(\d+)@/);if(!_0x45e270)return _0x37d50a[_0x2e3f86(0x136)](0x190)[_0x2e3f86(0x13d)](_0x2e3f86(0x153));const _0x3c5887=_0x45e270[0x1],_0x277747=[/(https:\/\/pin\.it\/[a-zA-Z0-9]+|https:\/\/(?:[a-z]+\.)?pinterest\.[a-z]+\/pin\/\d+\/?)/,/https:\/\/(?:www\.)?facebook\.[a-z]+\/[^\s]+/i,/https:\/\/(?:www\.)?instagram\.[a-z]+\/[^\s]+/i,/https:\/\/(?:www\.)?youtube\.com\/shorts\/[\w\-]+/i];let _0x4957b2='';for(const _0x1577cd of _0x277747){const _0x14f31a=_0x43a647[_0x2e3f86(0x11e)](_0x1577cd);if(_0x14f31a){_0x4957b2=_0x14f31a[0x0];break;}}if(!_0x4957b2)return _0x1062f3('No\x20supported\x20video\x20link\x20found\x20in\x20message.'),_0x37d50a[_0x2e3f86(0x136)](0x190)[_0x2e3f86(0x13d)](_0x2e3f86(0x123));_0x1062f3(_0x2e3f86(0x137)+_0x4957b2);const _0x45dd97=PINTEREST_API_BASE+_0x2e3f86(0x120)+encodeURIComponent(_0x4957b2),_0x5e266f=new AbortController(),_0x2cc9a1=setTimeout(()=>_0x5e266f[_0x2e3f86(0x148)](),0x9c40);let _0x167021;try{_0x167021=await fetch(_0x45dd97,{'signal':_0x5e266f[_0x2e3f86(0x14f)]});}catch(_0x54cb07){if(_0x54cb07['name']===_0x2e3f86(0x121))return _0x37d50a['status'](0x1f8)[_0x2e3f86(0x13d)](_0x2e3f86(0x126));return _0x37d50a['status'](0x1f4)[_0x2e3f86(0x13d)]('❌\x20Downloader\x20API\x20fetch\x20error:\x20'+_0x54cb07[_0x2e3f86(0x142)]);}finally{clearTimeout(_0x2cc9a1);}if(!_0x167021['ok'])return _0x37d50a['status'](0x1f4)[_0x2e3f86(0x13d)]('❌\x20Downloader\x20API\x20HTTP\x20error:\x20'+_0x167021[_0x2e3f86(0x136)]);const _0x584f99=await _0x167021[_0x2e3f86(0x144)]();if(!_0x584f99||_0x584f99[_0x2e3f86(0x136)]!=='success'||!_0x584f99[_0x2e3f86(0x143)])return _0x37d50a['status'](0x1f4)[_0x2e3f86(0x13d)](_0x2e3f86(0x146)+JSON[_0x2e3f86(0x154)](_0x584f99));const _0x9c1b52=_0x584f99[_0x2e3f86(0x143)],_0x2b33a2=_0x584f99[_0x2e3f86(0x11c)]||_0x2e3f86(0x138);_0x1062f3(_0x2e3f86(0x11d)+_0x9c1b52+_0x2e3f86(0x159)+_0x2b33a2);const _0x3a7261={'number':_0x3c5887,'type':_0x2e3f86(0x140),'message':_0x2b33a2,'media_url':_0x9c1b52,'instance_id':WHATSAPP_INSTANCE_ID,'access_token':WHATSAPP_ACCESS_TOKEN},_0x5f86df=await fetch('https://textsnap.in/api/send',{'method':_0x2e3f86(0x145),'headers':{'Content-Type':_0x2e3f86(0x139)},'body':JSON[_0x2e3f86(0x154)](_0x3a7261)}),_0xf86aad=await _0x5f86df[_0x2e3f86(0x11f)]();_0x1062f3('WhatsApp\x20API\x20HTTP\x20'+_0x5f86df[_0x2e3f86(0x136)]+':\x20'+_0xf86aad);if(!_0x5f86df['ok'])return _0x37d50a[_0x2e3f86(0x136)](0x1f4)[_0x2e3f86(0x13d)](_0x2e3f86(0x12e)+_0x5f86df[_0x2e3f86(0x136)]+'\x20'+_0xf86aad);return _0x37d50a[_0x2e3f86(0x136)](0xc8)['send']('✅\x20Video\x20sent\x20successfully!');};function _0x3585(){const _0x5365df=['media_url','json','POST','❌\x20Failed\x20to\x20fetch\x20video.\x20Raw:\x20','data','abort','1197857gDbqVT','status@broadcast','4048960JWnDZL','-@g.us','conversation','newsletter','signal','messages','27409676xHmrCw','content','❌\x20Invalid\x20remoteJid\x20format.','stringify',',\x20remoteJid:\x20','@newsletter','remoteJid','@lid',',\x20Title:\x20','[DEBUG]\x20','title','Video\x20URL:\x20','match','text','?url=','AbortError','@broadcast','❌\x20No\x20supported\x20video\x20link\x20found\x20in\x20message.','messageText:\x20','some','❌\x20Downloader\x20API\x20request\x20timed\x20out\x20(40s).','extendedTextMessage','6531284LOJYDT','Script\x20started','../config','Ignored\x20remoteJid:\x20','3246075ftMEzh','Invalid\x20JSON\x20format','❌\x20WhatsApp\x20API\x20error:\x20','❌\x20Invalid\x20webhook\x20format.','includes','broadcast','g.us','body','exports','log','status','Detected\x20video\x20URL:\x20','Video','application/json','message_key','1793236hKVCFR','8MpFHSN','send','❌\x20Ignored\x20remoteJid:\x20','4892628MzbjBA','media','❌\x20Missing\x20messageText\x20or\x20remoteJid','message'];_0x3585=function(){return _0x5365df;};return _0x3585();}
+// api/index.js
+const { PINTEREST_API_BASE, WHATSAPP_INSTANCE_ID, WHATSAPP_ACCESS_TOKEN } = require('../config');
+
+module.exports = async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+
+  const DEBUG_LOG = false;
+  function debugLog(msg) {
+    if (DEBUG_LOG) console.log(`[DEBUG] ${msg}`);
+  }
+
+  debugLog("Script started");
+
+  const data = req.body;
+  if (!data || !data.data || !data.data.message) {
+    debugLog("Invalid JSON format");
+    return res.status(400).send("❌ Invalid webhook format.");
+  }
+
+  const bodyMsg = data.data.message.body_message || {};
+  const remoteJid = data.data.message.message_key?.remoteJid || '';
+
+  // Ignore groups, broadcasts, newsletters, etc.
+  const ignorePatterns = [
+    '@g.us', '@broadcast', '@newsletter', 'status@broadcast',
+    '@lid', '-@g.us', 'g.us', 'broadcast', 'newsletter', 'status'
+  ];
+  if (ignorePatterns.some(pattern => remoteJid.includes(pattern))) {
+    debugLog(`Ignored remoteJid: ${remoteJid}`);
+    return res.status(400).send(`❌ Ignored remoteJid: ${remoteJid}`);
+  }
+
+  // Extract message text
+  let messageText = '';
+  if (bodyMsg?.messages?.conversation) messageText = bodyMsg.messages.conversation;
+  else if (bodyMsg?.content) messageText = bodyMsg.content;
+  else if (bodyMsg?.messages?.extendedTextMessage?.text)
+    messageText = bodyMsg.messages.extendedTextMessage.text;
+
+  debugLog(`messageText: ${messageText}, remoteJid: ${remoteJid}`);
+
+  if (!messageText || !remoteJid) {
+    return res.status(400).send("❌ Missing messageText or remoteJid");
+  }
+
+  const numberMatch = remoteJid.match(/^(\d+)@/);
+  if (!numberMatch) return res.status(400).send("❌ Invalid remoteJid format.");
+  const number = numberMatch[1];
+
+  // Detect supported URLs (Pinterest, Facebook, Instagram, YouTube Shorts)
+  const videoRegexes = [
+    // Pinterest
+    /(https:\/\/pin\.it\/[a-zA-Z0-9]+|https:\/\/(?:[a-z]+\.)?pinterest\.[a-z]+\/pin\/\d+\/?)/,
+    // Facebook
+    /https:\/\/(?:www\.)?facebook\.[a-z]+\/[^\s]+/i,
+    // Instagram
+    /https:\/\/(?:www\.)?instagram\.[a-z]+\/[^\s]+/i,
+    // YouTube Shorts
+    /https:\/\/(?:www\.)?youtube\.com\/shorts\/[\w\-]+/i
+  ];
+
+  let linkFound = '';
+  for (const regex of videoRegexes) {
+    const match = messageText.match(regex);
+    if (match) {
+      linkFound = match[0];
+      break;
+    }
+  }
+
+  if (!linkFound) {
+    debugLog("No supported video link found in message.");
+    return res.status(400).send("❌ No supported video link found in message.");
+  }
+
+  debugLog(`Detected video URL: ${linkFound}`);
+
+  // Downloader API with 40-second timeout
+  const downloaderUrl = `${PINTEREST_API_BASE}?url=${encodeURIComponent(linkFound)}`;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 40000); // 40 seconds timeout
+
+  let downloaderRes;
+  try {
+    downloaderRes = await fetch(downloaderUrl, { signal: controller.signal });
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      return res.status(504).send('❌ Downloader API request timed out (40s).');
+    }
+    return res.status(500).send(`❌ Downloader API fetch error: ${err.message}`);
+  } finally {
+    clearTimeout(timeout);
+  }
+
+  if (!downloaderRes.ok) {
+    return res.status(500).send(`❌ Downloader API HTTP error: ${downloaderRes.status}`);
+  }
+
+  const downloaderData = await downloaderRes.json();
+  if (!downloaderData || downloaderData.status !== 'success' || !downloaderData.media_url) {
+    return res
+      .status(500)
+      .send(`❌ Failed to fetch video. Raw: ${JSON.stringify(downloaderData)}`);
+  }
+
+  const mediaUrl = downloaderData.media_url;
+  const title = downloaderData.title || 'Video';
+
+  debugLog(`Video URL: ${mediaUrl}, Title: ${title}`);
+
+  // Send to WhatsApp API
+  const whatsappPayload = {
+    number,
+    type: 'media',
+    message: title,
+    media_url: mediaUrl,
+    instance_id: WHATSAPP_INSTANCE_ID,
+    access_token: WHATSAPP_ACCESS_TOKEN
+  };
+
+  const waRes = await fetch("https://textsnap.in/api/send", {
+    method: 'POST',
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(whatsappPayload)
+  });
+
+  const waText = await waRes.text();
+  debugLog(`WhatsApp API HTTP ${waRes.status}: ${waText}`);
+
+  if (!waRes.ok) {
+    return res.status(500).send(`❌ WhatsApp API error: ${waRes.status} ${waText}`);
+  }
+
+  return res.status(200).send("✅ Video sent successfully!");
+};
