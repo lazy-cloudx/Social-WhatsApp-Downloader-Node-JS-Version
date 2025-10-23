@@ -6,6 +6,7 @@
 || ############################################# ||
 \*===============================================*/
 
+// api/index.js
 const { PINTEREST_API_BASE, WHATSAPP_INSTANCE_ID, WHATSAPP_ACCESS_TOKEN } = require('../config');
 
 module.exports = async (req, res) => {
