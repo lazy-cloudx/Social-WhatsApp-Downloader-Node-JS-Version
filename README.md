@@ -80,8 +80,8 @@ https://textsnap.in/api/set_webhook?webhook_url=https://your-vercel-project.verc
 
 ## 📝 Usage
 
-1. **Deploy** the code to any PHP-supported server.
-2. **Configure** your `config.php` file.
+1. **Deploy** the code to any Node.js-supported platform (e.g., Vercel).
+2. **Configure** your `config.js` file with API details.
 3. **Set** the webhook URL using the endpoint above.
 4. **Send** any supported link (Pinterest, Instagram, Facebook, or YouTube) to your WhatsApp number.
 5. **Receive** the media directly in your WhatsApp chat! 🎬✅
