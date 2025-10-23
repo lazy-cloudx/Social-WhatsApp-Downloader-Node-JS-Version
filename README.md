@@ -92,8 +92,11 @@ https://textsnap.in/api/set_webhook?webhook_url=https://your-vercel-project.verc
 
 ```text
 📁 project-root
-├── config.php         # API keys and helper functions
-├── index.php          # Webhook logic
+├── api/
+│   └── index.js          # Main Node.js webhook logic
+├── config.js             # Configuration file (API Base + WhatsApp credentials)
+├── package.json          # Node.js project setup
+└── vercel.json           # Deployment configuration for Vercel
 ```
 
 ---
