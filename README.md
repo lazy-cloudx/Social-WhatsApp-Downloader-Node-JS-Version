@@ -36,7 +36,7 @@
 **Social WhatsApp Downloader** allows you to send links from multiple social media platforms — **Pinterest, Instagram, Facebook, and YouTube** — to your WhatsApp number and instantly receive the media file back (videos or images).
 The system automatically detects valid URLs, downloads the media, and sends it back via WhatsApp using a simple webhook-based setup.
 
-> **Built with PHP** — lightweight, fast, and easily deployable on any shared or VPS server.
+> **Built with Node.js** — lightweight, fast, and deployable on any platform such as **Vercel**, **Render**, or your **VPS server**.
 
 ---
 
