@@ -55,10 +55,13 @@ The system automatically detects valid URLs, downloads the media, and sends it b
 
 1. **Edit `config.php`:**
 
-   ```php
-   define('API_BASE', 'https://wadownloader.amitdas.site/api/');
-   define('WHATSAPP_INSTANCE_ID', 'YOUR_INSTANCE_ID');
-   define('WHATSAPP_ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
+   ```js
+   // config.js
+   module.exports = {
+     PINTEREST_API_BASE: 'https://api.amitdas.site/Pinterest/api/',
+     WHATSAPP_INSTANCE_ID: 'YOUR_INSTANCE_ID',
+     WHATSAPP_ACCESS_TOKEN: 'YOUR_ACCESS_TOKEN'
+   };
    ```
 
    > Get your WhatsApp API credentials from [textsnap.in](https://textsnap.in/)
@@ -67,7 +70,7 @@ The system automatically detects valid URLs, downloads the media, and sends it b
 
 ## 🔗 Set Webhook
 
-After uploading your files to a PHP-supported server, set the webhook with the following command:
+AAfter deploying your Node.js project to a hosting platform (for example, Vercel), set the webhook using the following API endpoint:
 
 ```
 https://textsnap.in/api/set_webhook?webhook_url=https://yourwebsite.com/index.php&enable=true&instance_id=YOUR_INSTANCE_ID&access_token=YOUR_ACCESS_TOKEN
