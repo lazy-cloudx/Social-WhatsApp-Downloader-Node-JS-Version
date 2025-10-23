@@ -68,20 +68,27 @@ The system automatically detects valid URLs, downloads the media, and sends it b
 
 ---
 
+Absolutely ✅ — here’s that exact section rewritten **only for the Node.js version**, keeping the **same layout, emojis, and structure** as your PHP README.
+
+---
+
 ## 🔗 Set Webhook
 
-After deploying your Node.js project to a hosting platform (for example, **Vercel**), set the webhook using the following API endpoint:
+After deploying your files to a **Node.js-supported platform** (like **Vercel**), set the webhook with the following command:
 
 ```
-https://textsnap.in/api/set_webhook?webhook_url=https://your-vercel-project.vercel.app&enable=true&instance_id=YOUR_INSTANCE_ID&access_token=YOUR_ACCESS_TOKEN
+https://textsnap.in/api/set_webhook?webhook_url=https://yourvercelproject.vercel.app/api/index.js&enable=true&instance_id=YOUR_INSTANCE_ID&access_token=YOUR_ACCESS_TOKEN
 ```
+
+> Replace `yourvercelproject.vercel.app` with your actual deployed Vercel project URL.
+> The webhook file (`index.js`) automatically handles all supported platforms — Pinterest, Instagram, Facebook, and YouTube.
 
 ---
 
 ## 📝 Usage
 
-1. **Deploy** the code to any Node.js-supported platform (e.g., Vercel).
-2. **Configure** your `config.js` file with API details.
+1. **Deploy** the code to any **Node.js-supported platform** (like Vercel).
+2. **Configure** your `config.js` file with your WhatsApp API details.
 3. **Set** the webhook URL using the endpoint above.
 4. **Send** any supported link (Pinterest, Instagram, Facebook, or YouTube) to your WhatsApp number.
 5. **Receive** the media directly in your WhatsApp chat! 🎬✅
@@ -92,11 +99,11 @@ https://textsnap.in/api/set_webhook?webhook_url=https://your-vercel-project.verc
 
 ```text
 📁 project-root
+├── config.js          # API keys and configuration
 ├── api/
-│   └── index.js          # Main Node.js webhook logic
-├── config.js             # Configuration file (API Base + WhatsApp credentials)
-├── package.json          # Node.js project setup
-└── vercel.json           # Deployment configuration for Vercel
+│   └── index.js       # Webhook logic (main file)
+├── package.json       # Node.js project setup
+└── vercel.json        # Vercel deployment configuration
 ```
 
 ---
@@ -121,71 +128,6 @@ https://www.facebook.com/watch/?v=XXXXXXXX
 
 ---
 
-## ⚙️ Deploy on Vercel
-
-### 1. Create `package.json`
-
-```json
-{
-  "name": "social-whatsapp-downloader-node",
-  "version": "1.0.0",
-  "private": true,
-  "type": "commonjs",
-  "main": "api/index.js",
-  "engines": { "node": ">=18" },
-  "dependencies": {},
-  "scripts": {
-    "start": "node api/index.js"
-  }
-}
-```
-
-### 2. Create `vercel.json`
-
-```json
-{
-  "version": 2,
-  "functions": {
-    "api/index.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "routes": [
-    { "src": "/.*", "dest": "/api/index.js" }
-  ]
-}
-```
-
-### 3. Deploy Steps
-
-Run the following commands:
-
-```bash
-npm install -g vercel
-vercel login
-vercel --prod
-```
-
-Once deployed, you’ll get a live link like:
-
-```
-https://your-vercel-project.vercel.app/
-```
-
-Use that as your webhook URL when setting it in **TextSnap**.
-
----
-
-## 🧠 How It Works
-
-1. User sends a supported link (Pinterest, Instagram, Facebook, or YouTube) to your WhatsApp number.
-2. The TextSnap API forwards that message to your webhook (`index.js`).
-3. The webhook detects the platform using **Regex patterns**.
-4. It calls your **downloader API** (`https://api.amitdas.site/Pinterest/api/?url=...`) to get the media file.
-5. The video or image is instantly sent back to the user via **WhatsApp**.
-
----
-
 ## 📌 To Do
 
 * [ ] Add custom caption formatting for WhatsApp replies
@@ -205,4 +147,6 @@ Use that as your webhook URL when setting it in **TextSnap**.
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+## This project is licensed under the [MIT License](LICENSE).
+
+Would you like me to also include a **“Local Testing”** section (like how to test via Postman before setting the webhook)? It can make the README more complete for Node developers.
