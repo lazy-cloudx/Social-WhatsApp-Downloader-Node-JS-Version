@@ -73,7 +73,7 @@ The system automatically detects valid URLs, downloads the media, and sends it b
 AAfter deploying your Node.js project to a hosting platform (for example, Vercel), set the webhook using the following API endpoint:
 
 ```
-https://textsnap.in/api/set_webhook?webhook_url=https://yourwebsite.com/index.php&enable=true&instance_id=YOUR_INSTANCE_ID&access_token=YOUR_ACCESS_TOKEN
+https://textsnap.in/api/set_webhook?webhook_url=https://your-vercel-project.vercel.app&enable=true&instance_id=YOUR_INSTANCE_ID&access_token=YOUR_ACCESS_TOKEN
 ```
 
 ---
