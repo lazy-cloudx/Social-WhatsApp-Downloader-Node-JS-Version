@@ -1,6 +1,7 @@
 ![Social WhatsApp Downloader Hero Image](https://repository-images.githubusercontent.com/1003179956/57f78d24-6705-4b84-a278-33006ec459ff)
 
-<h1 align="center">Social WhatsApp Downloader</h1>
+<h1 align="center">Social WhatsApp Downloader (Node.js)
+</h1>
 
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pinterest_Logo.svg/1024px-Pinterest_Logo.svg.png" width="80" alt="Pinterest Logo"/>
@@ -13,7 +14,7 @@
 </p>
 
 <p align="center">
-  <b>Download videos and images from Pinterest, Instagram, Facebook, and YouTube directly to WhatsApp using a lightweight PHP API</b>
+  <b>Download videos and images from Pinterest, Instagram, Facebook, and YouTube directly to WhatsApp using a lightweight Node.js API</b>
 </p>
 
 <p align="center">
