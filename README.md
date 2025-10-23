@@ -1,6 +1,6 @@
 ![Social WhatsApp Downloader Hero Image](https://repository-images.githubusercontent.com/1003179956/57f78d24-6705-4b84-a278-33006ec459ff)
 
-<h1 align="center">Social WhatsApp Downloader (Node.js)</h1>
+<h1 align="center">Social WhatsApp Downloader</h1>
 
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pinterest_Logo.svg/1024px-Pinterest_Logo.svg.png" width="80" alt="Pinterest Logo"/>
@@ -13,11 +13,10 @@
 </p>
 
 <p align="center">
-  <b>Download videos and images from Pinterest, Instagram, Facebook, and YouTube directly to WhatsApp using a lightweight Node.js API</b>
+  <b>Download videos and images from Pinterest, Instagram, Facebook, and YouTube directly to WhatsApp using a lightweight PHP API</b>
 </p>
 
 <p align="center">
-  <a href="#-overview">Overview</a> •
   <a href="#-features">Features</a> •
   <a href="#-configuration">Configuration</a> •
   <a href="#-set-webhook">Set Webhook</a> •
@@ -33,10 +32,10 @@
 
 ## 📌 Overview
 
-**Social WhatsApp Downloader** (Node.js Version) allows you to send links from multiple social media platforms — **Pinterest, Instagram, Facebook, and YouTube** — to your WhatsApp number and instantly receive the media file back (videos or images).  
+**Social WhatsApp Downloader** allows you to send links from multiple social media platforms — **Pinterest, Instagram, Facebook, and YouTube** — to your WhatsApp number and instantly receive the media file back (videos or images).
 The system automatically detects valid URLs, downloads the media, and sends it back via WhatsApp using a simple webhook-based setup.
 
-> **Built with Node.js** — lightweight, fast, and deployable on any platform such as **Vercel**, **Render**, or your **VPS server**.
+> **Built with PHP** — lightweight, fast, and easily deployable on any shared or VPS server.
 
 ---
 
@@ -53,42 +52,32 @@ The system automatically detects valid URLs, downloads the media, and sends it b
 
 ## 🛠️ Configuration
 
-1. **Create a `config.js` file:**
+1. **Edit `config.php`:**
 
-   ```js
-   // config.js
-   module.exports = {
-     PINTEREST_API_BASE: 'https://api.amitdas.site/Pinterest/api/',
-     WHATSAPP_INSTANCE_ID: 'YOUR_INSTANCE_ID',
-     WHATSAPP_ACCESS_TOKEN: 'YOUR_ACCESS_TOKEN'
-   };
-````
+   ```php
+   define('API_BASE', 'https://wadownloader.amitdas.site/api/');
+   define('WHATSAPP_INSTANCE_ID', 'YOUR_INSTANCE_ID');
+   define('WHATSAPP_ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
+   ```
 
-> Get your WhatsApp API credentials from [textsnap.in](https://textsnap.in/)
-
----
-
-Absolutely ✅ — here’s that exact section rewritten **only for the Node.js version**, keeping the **same layout, emojis, and structure** as your PHP README.
+   > Get your WhatsApp API credentials from [textsnap.in](https://textsnap.in/)
 
 ---
 
 ## 🔗 Set Webhook
 
-After deploying your files to a **Node.js-supported platform** (like **Vercel**), set the webhook with the following command:
+After uploading your files to a PHP-supported server, set the webhook with the following command:
 
 ```
-https://textsnap.in/api/set_webhook?webhook_url=https://yourvercelproject.vercel.app/api/index.js&enable=true&instance_id=YOUR_INSTANCE_ID&access_token=YOUR_ACCESS_TOKEN
+https://textsnap.in/api/set_webhook?webhook_url=https://yourwebsite.com/index.php&enable=true&instance_id=YOUR_INSTANCE_ID&access_token=YOUR_ACCESS_TOKEN
 ```
-
-> Replace `yourvercelproject.vercel.app` with your actual deployed Vercel project URL.
-> The webhook file (`index.js`) automatically handles all supported platforms — Pinterest, Instagram, Facebook, and YouTube.
 
 ---
 
 ## 📝 Usage
 
-1. **Deploy** the code to any **Node.js-supported platform** (like Vercel).
-2. **Configure** your `config.js` file with your WhatsApp API details.
+1. **Deploy** the code to any PHP-supported server.
+2. **Configure** your `config.php` file.
 3. **Set** the webhook URL using the endpoint above.
 4. **Send** any supported link (Pinterest, Instagram, Facebook, or YouTube) to your WhatsApp number.
 5. **Receive** the media directly in your WhatsApp chat! 🎬✅
@@ -99,11 +88,8 @@ https://textsnap.in/api/set_webhook?webhook_url=https://yourvercelproject.vercel
 
 ```text
 📁 project-root
-├── config.js          # API keys and configuration
-├── api/
-│   └── index.js       # Webhook logic (main file)
-├── package.json       # Node.js project setup
-└── vercel.json        # Vercel deployment configuration
+├── config.php         # API keys and helper functions
+├── index.php          # Webhook logic
 ```
 
 ---
@@ -147,6 +133,4 @@ https://www.facebook.com/watch/?v=XXXXXXXX
 
 ## 📄 License
 
-## This project is licensed under the [MIT License](LICENSE).
-
-Would you like me to also include a **“Local Testing”** section (like how to test via Postman before setting the webhook)? It can make the README more complete for Node developers.
+This project is licensed under the [MIT License](LICENSE).
