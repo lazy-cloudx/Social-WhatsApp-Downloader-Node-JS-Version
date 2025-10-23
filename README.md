@@ -1,4 +1,4 @@
-![Social WhatsApp Downloader Hero Image](https://repository-images.githubusercontent.com/1003179956/57f78d24-6705-4b84-a278-33006ec459ff)
+![Social WhatsApp Downloader Hero Image](https://repository-images.githubusercontent.com/1003385599/fe15526b-2aee-46e8-a36b-be4e27d5caf1)
 
 <h1 align="center">Social WhatsApp Downloader (Node.js)
 </h1>
