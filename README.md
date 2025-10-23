@@ -58,7 +58,7 @@ The system automatically detects valid URLs, downloads the media, and sends it b
    ```js
    // config.js
    module.exports = {
-     PINTEREST_API_BASE: 'https://api.amitdas.site/Pinterest/api/',
+     PINTEREST_API_BASE: 'https://wadownloader.amitdas.site/api/',
      WHATSAPP_INSTANCE_ID: 'YOUR_INSTANCE_ID',
      WHATSAPP_ACCESS_TOKEN: 'YOUR_ACCESS_TOKEN'
    };
