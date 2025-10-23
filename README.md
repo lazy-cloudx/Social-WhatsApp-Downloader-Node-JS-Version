@@ -13,14 +13,14 @@
 </p>
 
 <p align="center">
-  <b>Download videos and images from Pinterest, Instagram, Facebook, and YouTube directly to WhatsApp using a simple Node.js webhook API.</b>
+  <b>Download videos and images from Pinterest, Instagram, Facebook, and YouTube directly to WhatsApp using a lightweight Node.js API</b>
 </p>
 
 <p align="center">
   <a href="#-overview">Overview</a> •
   <a href="#-features">Features</a> •
   <a href="#-configuration">Configuration</a> •
-  <a href="#-deploy-on-vercel">Deploy on Vercel</a> •
+  <a href="#-set-webhook">Set Webhook</a> •
   <a href="#-usage">Usage</a> •
   <a href="#-file-structure">File Structure</a> •
   <a href="#-example">Example</a> •
@@ -33,28 +33,27 @@
 
 ## 📌 Overview
 
-**Social WhatsApp Downloader (Node.js)** lets you send media links from **Pinterest**, **Instagram**, **Facebook**, or **YouTube** to your WhatsApp number — and automatically receive the downloadable file (video or image) back within seconds.
+**Social WhatsApp Downloader** (Node.js Version) allows you to send links from multiple social media platforms — **Pinterest, Instagram, Facebook, and YouTube** — to your WhatsApp number and instantly receive the media file back (videos or images).  
+The system automatically detects valid URLs, downloads the media, and sends it back via WhatsApp using a simple webhook-based setup.
 
-This Node.js version replicates the exact logic of the original PHP version, but is **optimized for modern serverless platforms** like **Vercel**.
-
-> ⚙️ **Built with Node.js 20+** — lightweight, serverless-ready, and blazing fast.
+> **Built with Node.js** — lightweight, fast, and deployable on any platform such as **Vercel**, **Render**, or your **VPS server**.
 
 ---
 
 ## 🚀 Features
 
-* ⚡️ Supports **Pinterest**, **Instagram**, **Facebook**, and **YouTube Shorts**
-* 📱 Auto-detects valid video or image URLs via Regex
-* 💬 Instant media replies via WhatsApp Webhook
-* 🧩 Zero database or dependencies
-* 🪶 Deploys easily on **Vercel** or any Node.js server
-* 📝 Optional debug logging for developers
+* ⚡️ Download from **Pinterest**, **Instagram**, **Facebook**, and **YouTube**
+* 📱 Supports **Reels**, **Shorts**, and regular videos
+* 🔗 Instant WhatsApp automation via webhook (no polling)
+* 🪶 Zero database dependency
+* 🧩 Regex-based URL detection for multiple platforms
+* 📝 Debug logging system included
 
 ---
 
-## ⚙️ Configuration
+## 🛠️ Configuration
 
-1. Create a file named **`config.js`** in the project root:
+1. **Create a `config.js` file:**
 
    ```js
    // config.js
@@ -65,28 +64,70 @@ This Node.js version replicates the exact logic of the original PHP version, but
    };
 ````
 
-2. Replace `YOUR_INSTANCE_ID` and `YOUR_ACCESS_TOKEN` with your credentials from [textsnap.in](https://textsnap.in/).
+> Get your WhatsApp API credentials from [textsnap.in](https://textsnap.in/)
 
 ---
 
-## 🌐 Deploy on Vercel
+## 🔗 Set Webhook
 
-### 1. Project structure
+After deploying your Node.js project to a hosting platform (for example, **Vercel**), set the webhook using the following API endpoint:
 
 ```
+https://textsnap.in/api/set_webhook?webhook_url=https://your-vercel-project.vercel.app&enable=true&instance_id=YOUR_INSTANCE_ID&access_token=YOUR_ACCESS_TOKEN
+```
+
+---
+
+## 📝 Usage
+
+1. **Deploy** the code to any Node.js-supported platform (e.g., Vercel).
+2. **Configure** your `config.js` file with API details.
+3. **Set** the webhook URL using the endpoint above.
+4. **Send** any supported link (Pinterest, Instagram, Facebook, or YouTube) to your WhatsApp number.
+5. **Receive** the media directly in your WhatsApp chat! 🎬✅
+
+---
+
+## 📂 File Structure
+
+```text
 📁 project-root
 ├── api/
-│   └── index.js
-├── config.js
-├── package.json
-└── vercel.json
+│   └── index.js          # Main Node.js webhook logic
+├── config.js             # Configuration file (API Base + WhatsApp credentials)
+├── package.json          # Node.js project setup
+└── vercel.json           # Deployment configuration for Vercel
 ```
 
-### 2. `package.json`
+---
+
+## 📸 Example
+
+**Send a message on WhatsApp:**
+
+```
+https://youtube.com/shorts/c_07yu5BekI?si=4ukjWk8rtJmwXmpJ
+```
+
+**Or:**
+
+```
+https://in.pinterest.com/pin/996632592567664852/
+https://www.instagram.com/reel/XXXXXXXX/
+https://www.facebook.com/watch/?v=XXXXXXXX
+```
+
+**And receive the downloadable video automatically within seconds!**
+
+---
+
+## ⚙️ Deploy on Vercel
+
+### 1. Create `package.json`
 
 ```json
 {
-  "name": "social-whatsapp-downloader",
+  "name": "social-whatsapp-downloader-node",
   "version": "1.0.0",
   "private": true,
   "type": "commonjs",
@@ -99,7 +140,7 @@ This Node.js version replicates the exact logic of the original PHP version, but
 }
 ```
 
-### 3. `vercel.json`
+### 2. Create `vercel.json`
 
 ```json
 {
@@ -115,9 +156,9 @@ This Node.js version replicates the exact logic of the original PHP version, but
 }
 ```
 
-### 4. Deploy
+### 3. Deploy Steps
 
-Run these commands in your terminal:
+Run the following commands:
 
 ```bash
 npm install -g vercel
@@ -125,75 +166,32 @@ vercel login
 vercel --prod
 ```
 
-Vercel will automatically deploy your project and give you a live URL like:
+Once deployed, you’ll get a live link like:
 
 ```
-https://your-project-name.vercel.app/
+https://your-vercel-project.vercel.app/
 ```
 
-Use that as your webhook URL.
-
----
-
-## 🔗 Set Webhook
-
-After deploying, set your webhook using the following API call:
-
-```
-https://textsnap.in/api/set_webhook?webhook_url=https://your-vercel-app.vercel.app&enable=true&instance_id=YOUR_INSTANCE_ID&access_token=YOUR_ACCESS_TOKEN
-```
+Use that as your webhook URL when setting it in **TextSnap**.
 
 ---
 
 ## 🧠 How It Works
 
-1. When a user sends any supported social media link to your WhatsApp number,
-   TextSnap forwards that message to your deployed webhook.
-2. The webhook detects the platform (Pinterest, Instagram, Facebook, or YouTube).
-3. It calls the downloader API (`https://api.amitdas.site/Pinterest/api/`) to get a media file.
-4. The media is automatically sent back to the user via the WhatsApp API.
-
----
-
-## 📂 File Structure
-
-```text
-📁 project-root
-├── api/
-│   └── index.js         # Main Node.js webhook logic
-├── config.js            # Configuration file (API base & WhatsApp credentials)
-├── package.json         # Project setup for Node.js
-└── vercel.json          # Deployment configuration for Vercel
-```
-
----
-
-## 💬 Example
-
-**Send on WhatsApp:**
-
-```
-https://youtube.com/shorts/c_07yu5BekI?si=4ukjWk8rtJmwXmpJ
-```
-
-**Or:**
-
-```
-https://in.pinterest.com/pin/996632592567664852/
-https://www.instagram.com/reel/XXXXXXXX/
-https://www.facebook.com/watch/?v=XXXXXXXX
-```
-
-**Bot replies automatically with the downloadable video!** 🎬✅
+1. User sends a supported link (Pinterest, Instagram, Facebook, or YouTube) to your WhatsApp number.
+2. The TextSnap API forwards that message to your webhook (`index.js`).
+3. The webhook detects the platform using **Regex patterns**.
+4. It calls your **downloader API** (`https://api.amitdas.site/Pinterest/api/?url=...`) to get the media file.
+5. The video or image is instantly sent back to the user via **WhatsApp**.
 
 ---
 
 ## 📌 To Do
 
-* [ ] Add custom captions for WhatsApp replies
+* [ ] Add custom caption formatting for WhatsApp replies
 * [ ] Add Telegram bot integration
-* [ ] Add multiple quality support (HD/SD)
-* [ ] Add preview thumbnails before sending
+* [ ] Add web-based preview interface
+* [ ] Add multi-quality video support (SD/HD)
 
 ---
 
